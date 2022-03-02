@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<body>
+    <h1>Aplicando condição composta em site</h1>
+
+    Vivendo em: <input type="string" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="analisar()">
+    <div id="nacionalidade">
+
+    </div>
+
+    <script>
+        function analisar() {
+            var country = window.document.querySelector('input#pais')
+        
+            var nacionalidade = window.document.querySelector('div#nacionalidade')
+            var pais_country = String (country.value)
+
+            nacionalidade.innerHTML = `Seja bem vindo ao <strong>${pais_country}</strong>!`
+
+            var pais_country = pais_country.toLowerCase()
+
+            if (pais_country == 'brasil') {
+                nacionalidade.innerHTML += ` <p> Você é brasileiro! </p>` 
+            } else {nacionalidade.innerHTML += `<p> Você é gringo!`
+
+            }
+        }
+
+
+    </script>
+
+
+</body>
+</html>
